@@ -4,7 +4,7 @@ Status: **read-only adoption inventory**. Authority effect: **none**. This inven
 
 ## What was inspected
 
-The source cut is the public Lab commit [`19d860e719d6d65c05bff74b1c7547b3d48defcc`](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/tree/19d860e719d6d65c05bff74b1c7547b3d48defcc). The [machine manifest](source-manifest.json) records all 22 top-level areas (138,855 tracked paths), SHA-256 and byte length for every selected source, 36 current Definition records, nine selected Relation Kind records, and the 17 Lab schema snapshots already in ARN. Rebuild it with [the inventory script](../../../scripts/build_lab_asset_inventory.py) against that exact source commit.
+The source cut is the public Lab commit [`19d860e719d6d65c05bff74b1c7547b3d48defcc`](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/tree/19d860e719d6d65c05bff74b1c7547b3d48defcc). The [machine manifest](source-manifest.json) records all 22 top-level areas (138,855 tracked paths), all 183 current admitted Definition identities with exact source hashes, the 36-record initial reuse shortlist, nine selected Relation Kind records, and the 17 Lab schema snapshots already in ARN. The [complete current Definition catalog](CURRENT-DEFINITIONS.md) lists every current identity. Rebuild both with [the inventory script](../../../scripts/build_lab_asset_inventory.py) against that exact source commit.
 
 This is a repository-wide **area inventory with a selected-file audit**, not a claim that every one of the 138,855 files was read. The source cut avoids uncommitted Lab changes and distinguishes admitted contracts, candidate implementations, historical evidence, and generated projections. The path list and exact digests in the machine manifest are the adoption bill of materials.
 
@@ -21,7 +21,7 @@ python3 scripts/build_lab_asset_inventory.py \
 
 | Priority | Lab asset | Use in ARN | Condition before adoption |
 | --- | --- | --- | --- |
-| 0 | Definition registry and 36 relevant current records | A read-only semantic baseline for Project, Product, Goal, research work, evidence, authority, ontology and provenance | Import exact bytes as a **Lab reference snapshot**; map each ARN concept to reuse, specialization, or new definition. Do not replace ARN definitions by matching names. |
+| 0 | Definition registry and complete 183-record catalog; 36 initial priorities | A read-only semantic baseline for Project, Product, Goal, research work, evidence, authority, ontology and provenance | Review the full catalog, then import selected exact bytes as a **Lab reference snapshot**; map each ARN concept to reuse, specialization, or new definition. Do not replace ARN definitions by matching names. |
 | 0 | Definition v1/v2 schemas and candidate lifecycle profile | Shape and review vocabulary for ARN Definition records | Keep the profile's `candidate-unadmitted` status. Define an ARN owner and admission route before using it as policy. |
 | 1 | Artifact Type, Relation Kind, Typed Relation and ontology schemas | Graph contracts for research objects and their links | Check exact endpoint types, qualifiers, schema versions, and referential closure. |
 | 1 | Nine admitted Relation Kinds | Initial link vocabulary for contributions, derivation, evidence, evaluation and governance | Existing Lab endpoint pairs do not automatically cover ARN types; extend by an ARN-owned candidate rather than asserting Lab admission. |
@@ -31,7 +31,7 @@ python3 scripts/build_lab_asset_inventory.py \
 
 ### Definitions: start here
 
-The Lab [registry](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/definitions/registry.json) contains 189 admitted exact versions and 183 current identities. The manifest selects **36 current, admitted definitions** in these groups:
+The Lab [registry](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/definitions/registry.json) contains **189 admitted exact versions: 183 current identities and six historical/noncurrent versions**. The prior 36 count was an initial relevance shortlist, not the number admitted. The [full current catalog](CURRENT-DEFINITIONS.md) preserves the 183 identities, terms, versions and source paths. Its 183 identities have 180 distinct display terms, so a term alone is not a safe lookup key. The initial 36 priorities are:
 
 | Group | Selected terms |
 | --- | --- |
@@ -40,7 +40,9 @@ The Lab [registry](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d86
 | Links and provenance | Relation Kind, Typed Relation, Provenance, Semantic Event History, Governance Event History |
 | Review and authority | Admission Transaction, Authority, Authority Boundary, Decision, Policy, Principal, Project State, Review, Role |
 
-Some current Definition files live under `evidence/migrations/...`; their directory name does not negate their registry status. Conversely, registry admission is scoped to Lab. Copying a file into ARN does not admit its meaning in ARN. ARN currently has [41 task-local candidate definitions](../../proposals/agentic-research-network/2026-10-29/model-v1/definitions.json), with no exact term matches to this 36-term selection. A bridge should record each ARN term's Lab source, intended specialization, owner, unresolved differences and exact version. In particular, research novelty, reward, sponsor, W-token and engineer marketplace terms remain ARN-owned proposals.
+The other 147 current identities are available for review. Likely next-pass concepts include Artifact, Hypothesis, Experiment Run, Observation, Measurement Method, Measurement Result, Evaluation, Evidence, Validation Receipt, Challenge Contract, Ledger, Workflow and Traceability. Their meanings and version compatibility still need an ARN use-case review.
+
+Some current Definition files live under `evidence/migrations/...`; their directory name does not negate their registry status. Conversely, registry admission is scoped to Lab. Copying a file into ARN does not admit its meaning in ARN. ARN currently has [41 task-local candidate definitions](../../proposals/agentic-research-network/2026-10-29/model-v1/definitions.json), with **no exact term matches to any of the 183 current Lab terms**. A bridge should record each ARN term's Lab source, intended specialization, owner, unresolved differences and exact version. In particular, research novelty, reward, sponsor, W-token and engineer marketplace terms remain ARN-owned proposals. The Lab already has a substantial admitted vocabulary; admitting more Lab definitions solely to increase the count is unnecessary.
 
 Copy the [Definition schemas](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/tree/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/artifact-types/definition), [registry index](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/definitions/DEFINITIONS-INDEX.md) and [drift audit](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/definitions/drift-audit.json) only as supporting source evidence. The [Definition lifecycle profile](https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/19d860e719d6d65c05bff74b1c7547b3d48defcc/authority/profiles/definition/v1/lifecycle.json) is **candidate-unadmitted**. Its sequence is candidate-authored → validated-candidate → owner-reviewed → admitted, with superseded/withdrawn routes. A validation PASS and an owner review are separate from admission.
 
@@ -88,7 +90,7 @@ Counts are tracked files at the pinned public Lab commit. “Reference” means 
 
 ## Import sequence and acceptance checks
 
-1. **Semantic bridge.** Generate a read-only source slice from the 36 definition paths in the manifest, retaining original IDs, versions, status and digest. Add an ARN mapping for each local definition: reuse, specialize, new, or unresolved. Check for collisions and owner assignment. Keep the full Lab registry as evidence, not ARN's current lookup.
+1. **Semantic bridge.** Review the full 183-identity catalog and begin a read-only source slice with the 36 initial priorities plus any other definitions required by ARN. Retain original IDs, versions, status and digest. Add an ARN mapping for each local definition: reuse, specialize, new, or unresolved. Check for collisions and owner assignment. Keep the full Lab registry as evidence, not ARN's current lookup.
 2. **Typed graph.** Reuse the 17 existing schemas, add only required type/ontology schemas and the selected relation records, and build an ARN type/edge registry. Validate exact endpoint pairs, qualifiers, referenced definitions, versioned type IDs and cycles. Record which relations are genuinely new ARN proposals.
 3. **Decision trail.** Define ARN review, Project State, appeal and contribution decisions using the Lab provenance/context patterns. Separate semantic state, authority state, validation evidence and publication state.
 4. **Ontology prototype.** If the graph needs event replay, import the whole candidate closure into an experimental module. Prove replay determinism, cut consistency, governance joins and projection regeneration against ARN fixtures before making it a core dependency.

@@ -12,6 +12,7 @@ from pathlib import Path
 
 ARN_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ARN_ROOT / "docs/lab-asset-adoption/2026-11-01/source-manifest.json"
+DEFAULT_CATALOG_OUT = ARN_ROOT / "docs/lab-asset-adoption/2026-11-01/CURRENT-DEFINITIONS.md"
 
 CORE_TERMS = {
     "Admission Transaction", "Agent", "Artifact Type", "Artifact Type Registry",
@@ -118,6 +119,24 @@ def build(lab: Path, ref: str) -> dict:
     areas = Counter(path.split("/", 1)[0] for path in paths)
     registry = json.loads(source_bytes(lab, commit, "authority/definitions/registry.json"))
     current_refs = set(registry["current_lookup"].values())
+    current = [entry for entry in registry["entries"]
+               if f"{entry['definition_id']}@{entry['version']}" in current_refs]
+    if len(current) != len(current_refs):
+        raise ValueError("current Definition lookup does not resolve one-to-one")
+    current_rows = [{**file_entry(lab, commit, entry["path"]),
+                     "definition_id": entry["definition_id"],
+                     "version": entry["version"],
+                     "term": entry["term"],
+                     "lifecycle_state": entry["lifecycle_state"]}
+                    for entry in sorted(current, key=lambda e: (e["term"].casefold(), e["definition_id"]))]
+    historical = [entry for entry in registry["entries"]
+                  if f"{entry['definition_id']}@{entry['version']}" not in current_refs]
+    historical_rows = [{"definition_id": entry["definition_id"],
+                        "version": entry["version"],
+                        "term": entry["term"],
+                        "path": entry["path"],
+                        "lifecycle_state": entry["lifecycle_state"]}
+                       for entry in sorted(historical, key=lambda e: (e["term"].casefold(), e["definition_id"]))]
     core = [entry for entry in registry["entries"]
             if entry["term"] in CORE_TERMS and
             f"{entry['definition_id']}@{entry['version']}" in current_refs]
@@ -160,6 +179,8 @@ def build(lab: Path, ref: str) -> dict:
         "tracked_area_counts": dict(sorted(areas.items())),
         "lab_definition_registry": {"admitted_versions": len(registry["entries"]),
                                     "current_identities": len(registry["current_lookup"])},
+        "all_current_lab_definitions": current_rows,
+        "noncurrent_admitted_versions": historical_rows,
         "selected_core_definitions": core_rows,
         "selected_relation_kinds": relation_rows,
         "selected_source_groups": groups,
@@ -168,25 +189,60 @@ def build(lab: Path, ref: str) -> dict:
     }
 
 
+def render_catalog(result: dict) -> str:
+    commit = result["source_commit"]
+    lines = [
+        "# Current admitted Lab Definitions",
+        "",
+        "Status: read-only source catalog. Authority effect: none.",
+        "",
+        f"Source: `cyberAlchemyAI/CyberAlchemy-lab` at `{commit}`. The registry has "
+        f"{result['lab_definition_registry']['admitted_versions']} admitted exact versions; "
+        f"{result['lab_definition_registry']['current_identities']} identities are current. "
+        f"The remaining {len(result['noncurrent_admitted_versions'])} admitted versions are "
+        "historical/noncurrent. The 36-record shortlist in [INVENTORY.md](INVENTORY.md) "
+        "is a reuse priority, not the full admitted set.",
+        "",
+        "The current lookup is keyed by identity, so distinct IDs can share a display term. "
+        "Each source link below points to the exact pinned version. Importing a record "
+        "does not admit it in ARN.",
+        "",
+        "| Term | Definition identity | Source |",
+        "| --- | --- | --- |",
+    ]
+    for row in result["all_current_lab_definitions"]:
+        url = f"https://github.com/cyberAlchemyAI/CyberAlchemy-lab/blob/{commit}/{row['path']}"
+        lines.append(f"| {row['term']} | `{row['definition_id']}@{row['version']}` | [record]({url}) |")
+    lines += ["", "The exact source paths, hashes, byte lengths and six noncurrent versions are in [source-manifest.json](source-manifest.json).", ""]
+    return "\n".join(lines)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--lab-root", type=Path, required=True)
     parser.add_argument("--ref", default="origin/main")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--catalog-out", type=Path, default=DEFAULT_CATALOG_OUT)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     result = build(args.lab_root.resolve(), args.ref)
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
+    catalog = render_catalog(result)
     if args.check:
         if args.out.read_text() != rendered:
             raise SystemExit("FAIL: Lab asset inventory differs from pinned source")
+        if args.catalog_out.read_text() != catalog:
+            raise SystemExit("FAIL: Lab Definition catalog differs from pinned source")
         print("PASS: Lab asset inventory matches pinned source")
         return
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(rendered)
+    args.catalog_out.parent.mkdir(parents=True, exist_ok=True)
+    args.catalog_out.write_text(catalog)
     print(f"Wrote {args.out}: {len(result['selected_core_definitions'])} definitions, "
           f"{len(result['selected_relation_kinds'])} relation kinds, "
           f"{len(result['existing_arn_schema_snapshots'])} existing schema snapshots")
+    print(f"Wrote {args.catalog_out}: {len(result['all_current_lab_definitions'])} current definitions")
 
 
 if __name__ == "__main__":
