@@ -1,0 +1,793 @@
+{
+  "authority_effect": "none",
+  "claim_ceiling": "Exact selected source bytes and inventory counts at one public Lab commit; no copied authority, runtime adoption, admission or Product effect.",
+  "existing_arn_schema_snapshots": [
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/context/v1/schema.json",
+      "source_sha256": "15c73290ff7e8efbb10a3ed20248fddb8884e0e4e4aebdf187c491e87e81eb7e"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/decision/v1/schema.json",
+      "source_sha256": "c3f8c0d722a85ea25f37e6748e833825d4a33acf4d95425c54af228c4fb14c9c"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/delegation/v1/schema.json",
+      "source_sha256": "e77df2482d87b6a5226f6ebc78195652b031ad2b94f9494c34d889a155e1f901"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/evidence-set/v1/schema.json",
+      "source_sha256": "cdd6acb7d1546ae5e709c042d75cd656335297aac8111e8d0e2e631abf325ae9"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/experiment-design/v1/schema.json",
+      "source_sha256": "b06e1aaf05777ce8f901c6c856db64f9569c9dcbaa49e225baee18f1b28928b6"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/finding/v1/schema.json",
+      "source_sha256": "b0e2d44bee4819881a8e38369dc89646e967297028cd6b28959b9e43ab01d023"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/goal/v1/schema.json",
+      "source_sha256": "9c81c21cdebd0584aac4ec41424008a1882bc78271c3c540938ff9a65ef3aeb3"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/policy/v1/schema.json",
+      "source_sha256": "d1242bbd087be084550916dc5823179c8514639de3f2f58590d4b122663c069d"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/principal/v1/schema.json",
+      "source_sha256": "987c3c1d090763091543df94aedf2bd26e9f38755f203ab914d7d9a07e9910e8"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/product-identity/v2/schema.json",
+      "source_sha256": "cfe7b179ca4b420880213843e1d0c0c56654b0c1ce632188f7c00871a2d8020e"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/product-thesis/v1/schema.json",
+      "source_sha256": "26bbe2e9de44384da0fd582f592d6a9b8d98eaf52f2d4db34230beefecce9298"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/project-identity/v1/schema.json",
+      "source_sha256": "1fbfeba8bfc7157cf666d4c268ddcbd6c031b951acd2734817ef004eeb6145ef"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/research-inquiry/v1/schema.json",
+      "source_sha256": "7d7a951f330785bcdd05d76a629496b2edc1233e4e0c3ded3382811d14750330"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/research-run/v1/schema.json",
+      "source_sha256": "6c4e0abd972db936fd55649561b7c5fa681fdf7c053973bd904f32078a262ed5"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/review/v1/schema.json",
+      "source_sha256": "4b11503db405a76bde3e38b54f4f353ac1cebe2c4d9b1d7dd5a047520da97f69"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/role/v1/schema.json",
+      "source_sha256": "4705f341530d0a20e98655e93febead21a4dfc24cef1c3dcac7d792a649bb2b4"
+    },
+    {
+      "byte_current": true,
+      "path": "authority/artifact-types/role-assignment/v1/schema.json",
+      "source_sha256": "bb5dfb9d3eecf2cd86b84310a1f1a60c770ea7c109a5995401f58eb64347327c"
+    }
+  ],
+  "lab_definition_registry": {
+    "admitted_versions": 189,
+    "current_identities": 183
+  },
+  "schema_version": "arn.lab-asset-inventory/v1",
+  "selected_core_definitions": [
+    {
+      "bytes": 6445,
+      "definition_id": "cal.definition.admission-transaction",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0016-admission-transaction/definitions/admission-transaction/v1/definition.json",
+      "sha256": "af1468a3eaec84c1146a1b570f4154738d586d9691f846fbf56f9fa5228c3b86",
+      "term": "Admission Transaction",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 9184,
+      "definition_id": "cal.definition.agent",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/agent/v1/definition.json",
+      "sha256": "d4d37df4348174422e4ca428074a997b80bb6b0ab6eee1efd7721c09a06b70d3",
+      "term": "Agent",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5334,
+      "definition_id": "cal.definition.artifact-type",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0007-cml07-semantic-closure/definitions/artifact-type/v1/definition.json",
+      "sha256": "90c61c2fa5a5f1d5d0a96d8e6c1f4b1f902e8ad57d85ef1e315e549470abb69f",
+      "term": "Artifact Type",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 4734,
+      "definition_id": "cal.definition.artifact-type-registry",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0009-artifact-surface-foundation/definitions/artifact-type-registry/v1/definition.json",
+      "sha256": "e554069c42d0ee17d4df65a0de2b0bba998933622aa9aba296671a01dd273e81",
+      "term": "Artifact Type Registry",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8154,
+      "definition_id": "cal.definition.authority",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/authority/v1/definition.json",
+      "sha256": "9266097c000d2e22ad253ac5df402f729e7284a6990edcd723968dbf0f023e7d",
+      "term": "Authority",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 6013,
+      "definition_id": "cal.definition.authority-boundary",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0003-single-decision-checkpoint/definitions/authority-boundary/v1/definition.json",
+      "sha256": "e6928339ebf6cbd41966e268da7eeee32d395da382522da086f98c3e2737896c",
+      "term": "Authority Boundary",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 10957,
+      "definition_id": "cal.definition.context",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/context/v1/definition.json",
+      "sha256": "3a5dad72f7cffc64dfcc96e6ced0112cb01ed7a65a7acc9585ad7e1bbff9fcc7",
+      "term": "Context",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5697,
+      "definition_id": "cal.definition.decision",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/decision/v1/definition.json",
+      "sha256": "514f8a33054508ecd7050ddeb5241e3cd55d7ccf7bfd8677323ebea6318627be",
+      "term": "Decision",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 6087,
+      "definition_id": "cal.definition.definition",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0001-definition-and-ctx00-v1/definitions/definition/v1/definition.json",
+      "sha256": "eac40dc90ad32383cf8d6724858bf1f4d80c105ed06c8168996a861b43a09575",
+      "term": "Definition",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8169,
+      "definition_id": "cal.definition.evidence-set",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/evidence-set/v1/definition.json",
+      "sha256": "26f072c0292c4b7349726061f7df218ef1ce883c08888d33e375d4cbe1dd7148",
+      "term": "Evidence Set",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8517,
+      "definition_id": "cal.definition.experiment-design",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/experiment-design/v1/definition.json",
+      "sha256": "4bab2e4a846560b6e579f275de0e2e6dc4a0593434a3b3fdbb83f7c856d880dc",
+      "term": "Experiment Design",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8076,
+      "definition_id": "cal.definition.finding",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/finding/v1/definition.json",
+      "sha256": "bf994ee8ec8731e4f09db9b427bda4ab4925407c1bec7ecddd971e53a0554400",
+      "term": "Finding",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 4882,
+      "definition_id": "CAV2-D59",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0006-craft-identity/definitions/goal/v1/definition.json",
+      "sha256": "f43a539e5f0f4db26dab0df0cb30c523868c6fef3dbb3d061614a4d288c5ae19",
+      "term": "Goal",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5852,
+      "definition_id": "cal.definition.governance-event-history",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/governance-event-history/v1/definition.json",
+      "sha256": "29da47008390e0ebfd8a4b3828858dcf9170df3a3414e2ffe1fcfbfd653fbe2a",
+      "term": "Governance Event History",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 11629,
+      "definition_id": "cal.definition.ontology",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/ontology/v1/definition.json",
+      "sha256": "2f14c4861b7d5b9b22768fdd6d56df8dfce08f6557594046c7842dee46f884b8",
+      "term": "Ontology",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5488,
+      "definition_id": "cal.definition.ontology-cut",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/ontology-cut/v1/definition.json",
+      "sha256": "4fcb9ad5200ed0e0a6d1d91acea8ce6236bed6800724c8896cc0d4dd7b9a4417",
+      "term": "Ontology Cut",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5939,
+      "definition_id": "cal.definition.ontology-edge",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/ontology-edge/v1/definition.json",
+      "sha256": "c5eeab76f0ba40c769256c0709206282bcb18ab05a0cdfd311208cf5927b0844",
+      "term": "Ontology Edge",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5968,
+      "definition_id": "cal.definition.ontology-manifest",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/ontology-manifest/v1/definition.json",
+      "sha256": "34289df770ad7df33a9bc26109f485b18ce40e4cb72b50872cb1be3785195b58",
+      "term": "Ontology Manifest",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5781,
+      "definition_id": "cal.definition.ontology-node",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/ontology-node/v1/definition.json",
+      "sha256": "976d20f5da63bf6fa774859a878d3d172ccd7b44484364d8caa2fd80f4d36f3e",
+      "term": "Ontology Node",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 6533,
+      "definition_id": "cal.definition.ontology-view",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/ontology-view/v1/definition.json",
+      "sha256": "1fcc7fa38a6a77e67258ae56c49719ea35f1c853868060ab58200343fde2f81e",
+      "term": "Ontology View",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5508,
+      "definition_id": "cal.definition.policy",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/policy/v1/definition.json",
+      "sha256": "04460c28fa56271c696786b882bf69e8327e2a22413d796add060f54db3ed660",
+      "term": "Policy",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5834,
+      "definition_id": "cal.definition.principal",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/principal/v1/definition.json",
+      "sha256": "60180d24ef3e83c517ea8f51f5ab863801c248ac80d19864353b58f70aaad794",
+      "term": "Principal",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5120,
+      "definition_id": "cal.definition.product",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0006-craft-identity/definitions/product/v1/definition.json",
+      "sha256": "19c6b3bdb5e4c8515837d40c2b0a98b0fecb6edc3698aab359fa2a0d64d9a1cd",
+      "term": "Product",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 10081,
+      "definition_id": "cal.definition.product-capability",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/product-capability/v1/definition.json",
+      "sha256": "446a5357c0dd1337c7345e9c5b14a8ff9b7c03d4ad1162384c491e3400f05431",
+      "term": "Product Capability",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5188,
+      "definition_id": "CAV2-D60",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0006-craft-identity/definitions/project/v1/definition.json",
+      "sha256": "f342be625bee345590d9d1f4f20ff14f6005c8ec9ed9108f0cf70cd0ae05ca68",
+      "term": "Project",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 6576,
+      "definition_id": "cal.definition.project-state",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/project-state/v1/definition.json",
+      "sha256": "40e00c926c7ca2a9143c321e1681ebb7df480c71d4b8950e5524849758b4e784",
+      "term": "Project State",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 7302,
+      "definition_id": "cal.definition.provenance",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/provenance/v1/definition.json",
+      "sha256": "514e2c9e19882553cbdfb1f10b94dacb510bf010a9aa0727b1068aff839ca86b",
+      "term": "Provenance",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5820,
+      "definition_id": "cal.definition.relation-kind",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/relation-kind/v1/definition.json",
+      "sha256": "f5f1e77b4b2bbbc96a6024d4c46c54b7d183c692724a48873570f610f4b868bb",
+      "term": "Relation Kind",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8160,
+      "definition_id": "cal.definition.research-inquiry",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/research-inquiry/v1/definition.json",
+      "sha256": "0a5445e954049cdd5abcee276fef085f97e409ebd325e571c489c4db92efafe7",
+      "term": "Research Inquiry",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8105,
+      "definition_id": "cal.definition.research-run",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/research-run/v1/definition.json",
+      "sha256": "840fc46706d2b5f3121d0ba52854a9bd94369a8f29a8ee75196b0effb8695ebc",
+      "term": "Research Run",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5442,
+      "definition_id": "cal.definition.review",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/review/v1/definition.json",
+      "sha256": "db548dded27804654bc978da08c3e509920f814399a295ed59cdcc26589f029d",
+      "term": "Review",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 8725,
+      "definition_id": "cal.definition.role",
+      "lifecycle_state": "admitted",
+      "path": "evidence/migrations/cyberalchemy-v2-to-lab/candidates/0004-artifact-reconstruction-pipeline/layers/l1-semantic-repeatability/definitions/role/v1/definition.json",
+      "sha256": "d9315a8d2aea99af0933a9dc80dc09c418dcbc5ed2a334f246ebfdbfebf3db2b",
+      "term": "Role",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5738,
+      "definition_id": "cal.definition.semantic-event-history",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/semantic-event-history/v1/definition.json",
+      "sha256": "5eee07c5ba67a00b79bc331fa6d5443ab1fd7c741ff7e484a6baca3337fe6959",
+      "term": "Semantic Event History",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5475,
+      "definition_id": "cal.definition.source",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/source/v1/definition.json",
+      "sha256": "aefe53df65d0697772ccb565ec9c279927b1ace67bfd770d2dd959309f11d63a",
+      "term": "Source",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 6049,
+      "definition_id": "cal.definition.typed-relation",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/typed-relation/v1/definition.json",
+      "sha256": "e9799dbdbb40a9de8fe44eb73c813c256c04206d0956b4417e1371ec7f72dec5",
+      "term": "Typed Relation",
+      "version": "1.0.0-candidate.1"
+    },
+    {
+      "bytes": 5405,
+      "definition_id": "cal.definition.work",
+      "lifecycle_state": "admitted",
+      "path": "authority/definitions/candidates/0013-integrated-lab-definition-model/definitions/work/v1/definition.json",
+      "sha256": "fcae28e30cb7aa64eca252b739ed4401709b7039770a6af52ac2b7a93bcad5b0",
+      "term": "Work",
+      "version": "1.0.0-candidate.1"
+    }
+  ],
+  "selected_relation_kinds": [
+    {
+      "bytes": 2595,
+      "exact_endpoint_pair_count": 8,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/contributes-to.json",
+      "relation_kind_ref": "relation.contributes-to",
+      "sha256": "a162c2943fe792186572b280c04b8f4b9fc919cba6ced30decc3da17c006fd52"
+    },
+    {
+      "bytes": 4318,
+      "exact_endpoint_pair_count": 21,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/declares-effect-on.json",
+      "relation_kind_ref": "relation.declares-effect-on",
+      "sha256": "bd16d779231c9d29a052fc9fc1217d5d6ff9edc52785cf012fb202a2cc6bdb9c"
+    },
+    {
+      "bytes": 6516,
+      "exact_endpoint_pair_count": 40,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/derives-from.json",
+      "relation_kind_ref": "relation.derives-from",
+      "sha256": "63a0ce68e91df2b5a194738e6534dc5da2c10436ea847752fbdf4d8a45d8c891"
+    },
+    {
+      "bytes": 2137,
+      "exact_endpoint_pair_count": 4,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/engages-inquiry.json",
+      "relation_kind_ref": "relation.engages-inquiry",
+      "sha256": "080978c35ebdd242b3398d038db802d1031f10c1dedf3097161de7dc3910583a"
+    },
+    {
+      "bytes": 3833,
+      "exact_endpoint_pair_count": 16,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/evaluates.json",
+      "relation_kind_ref": "relation.evaluates",
+      "sha256": "508e41bd0dd8be28344c9ba4c6aa9d1fe0a469459c6de9883bc893094b4c84c9"
+    },
+    {
+      "bytes": 9604,
+      "exact_endpoint_pair_count": 72,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/evidence-bears-on.json",
+      "relation_kind_ref": "relation.evidence-bears-on",
+      "sha256": "f6b0cda804c0130d47c09b900ffb19cadfde8c371ee001df66d0d0c73c0d5253"
+    },
+    {
+      "bytes": 4299,
+      "exact_endpoint_pair_count": 23,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/governed-by.json",
+      "relation_kind_ref": "relation.governed-by",
+      "sha256": "bb452c77bd393f5abc0b7cead247965bbd40df5b20f1a32850b91fd294533587"
+    },
+    {
+      "bytes": 4494,
+      "exact_endpoint_pair_count": 23,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/member-of.json",
+      "relation_kind_ref": "relation.member-of",
+      "sha256": "e50e790c2f84f9ee3f4673de62b8b7e486ee8c2ae37e75e44ba2fd19b3cf56f4"
+    },
+    {
+      "bytes": 2050,
+      "exact_endpoint_pair_count": 2,
+      "lifecycle_state": "admitted-current",
+      "path": "authority/relation-kinds/candidates/0006-definition-complete-instances/instances/relation-kinds/realizes.json",
+      "relation_kind_ref": "relation.realizes",
+      "sha256": "affd03d8d00c136c70fa379e5aaf389b11cc8fd5856336790ce228277fcc16e3"
+    }
+  ],
+  "selected_source_groups": {
+    "define-context-and-architecture": [
+      {
+        "bytes": 5386,
+        "path": "define/README.md",
+        "sha256": "f9509663f00f479feb6a01af5fac02f5593dced0ba1da7984127bd557d4f28e1"
+      },
+      {
+        "bytes": 6036,
+        "path": "implementation/define-cli/v1/README.md",
+        "sha256": "472fb51a99b0a1adbc226bdc27cb1ae0911f586bd0308d6b605c2cdc06f13fab"
+      },
+      {
+        "bytes": 9420,
+        "path": "docs/lab/guide/records-and-connections.md",
+        "sha256": "22565a4239f30a6d563b31d9037c48c131b73bb29cb3d8ce8fc946811a80cf13"
+      },
+      {
+        "bytes": 1159,
+        "path": "architecture/ARCHITECTURE.md",
+        "sha256": "7ec5e118c48889c86185298c249b55366843867dbf96c49ea31be97b440d2d09"
+      },
+      {
+        "bytes": 2411,
+        "path": "architecture/pattern-library/DEPENDENCY-RULES.md",
+        "sha256": "d03793be5e8108a2ea86889c2f28a609f4836d548175369f978b2b66ef81a338"
+      },
+      {
+        "bytes": 2841,
+        "path": "architecture/pattern-library/TESTING-ALIGNMENT.md",
+        "sha256": "32f43edd2a108da15505a6b749bdf6e52762c71fcb49485e36f290f21bba44c6"
+      },
+      {
+        "bytes": 9740,
+        "path": "tooling/inventory/build_inventory.py",
+        "sha256": "95339b7bee06207ce82572ec66e1c8157f9cf450b5a3e589221393ac90701870"
+      }
+    ],
+    "definition-contract": [
+      {
+        "bytes": 115471,
+        "path": "authority/definitions/registry.json",
+        "sha256": "5f5472203c0cc90eb657422c77d935a5ee00a3559a0245c9a1063744e6babaf1"
+      },
+      {
+        "bytes": 62632,
+        "path": "authority/definitions/DEFINITIONS-INDEX.md",
+        "sha256": "2d016388187acdff065f1b4cbae10b25a2b042ae2fa690dc3c6a8703dab3c32b"
+      },
+      {
+        "bytes": 8408,
+        "path": "authority/definitions/drift-audit.json",
+        "sha256": "7a88329d2fb9e9d9e62418dd395a5b56c2fc2def0c7813771cb72770326cc9ed"
+      },
+      {
+        "bytes": 7602,
+        "path": "authority/artifact-types/definition/v1/schema.json",
+        "sha256": "c39a2c6fe7bdc2cd306152c1b8c4c9dc045d784e44e35d9d9da4e1517bd03adf"
+      },
+      {
+        "bytes": 10760,
+        "path": "authority/artifact-types/definition/v2/schema.json",
+        "sha256": "269591e7f0dd7c1c077579dd874599ba08fa8e17df10fa262d936f8ad5519181"
+      },
+      {
+        "bytes": 2999,
+        "path": "authority/profiles/definition/v1/lifecycle.json",
+        "sha256": "aa81df2baa7be140cfa130723008a122d9aae73815a5cbd07bbcf92dacc64af8"
+      },
+      {
+        "bytes": 2336,
+        "path": "authority/profiles/definition/v1/LIFECYCLE.md",
+        "sha256": "5b3f3b41e6e5ee8ce245d31315c8b2d781ccb50416b508ec6384606019967089"
+      },
+      {
+        "bytes": 3336,
+        "path": "docs/lab/how-to/prepare-definition.md",
+        "sha256": "b77fd8717efd5b65da6bc5aaeebcc1cbb5e5db3404481fc1fa05f24509f2d1db"
+      }
+    ],
+    "governance-and-state": [
+      {
+        "bytes": 749,
+        "path": "authority/project-state-transitions/current.json",
+        "sha256": "8ba8ee25ccbf12721d800c693120a3452ddf1ec4427c6fdf1e0655beae31bc12"
+      },
+      {
+        "bytes": 3632,
+        "path": "authority/artifact-types/project-state/v1/schema.json",
+        "sha256": "dd125c16a4e9e4bcb6a38a8c3a87ec28032444adc12735c6ee1b6e04ac8dfeb6"
+      },
+      {
+        "bytes": 3633,
+        "path": "authority/artifact-types/decision/v1/schema.json",
+        "sha256": "c3f8c0d722a85ea25f37e6748e833825d4a33acf4d95425c54af228c4fb14c9c"
+      },
+      {
+        "bytes": 3254,
+        "path": "authority/artifact-types/policy/v1/schema.json",
+        "sha256": "d1242bbd087be084550916dc5823179c8514639de3f2f58590d4b122663c069d"
+      },
+      {
+        "bytes": 2462,
+        "path": "authority/artifact-types/role/v1/schema.json",
+        "sha256": "4705f341530d0a20e98655e93febead21a4dfc24cef1c3dcac7d792a649bb2b4"
+      },
+      {
+        "bytes": 3386,
+        "path": "authority/artifact-types/principal/v1/schema.json",
+        "sha256": "987c3c1d090763091543df94aedf2bd26e9f38755f203ab914d7d9a07e9910e8"
+      },
+      {
+        "bytes": 1632,
+        "path": "implementation/lab-runtime/ADMISSION.md",
+        "sha256": "79c23e82b5dedb74b19580f845c333554e8cd5d73a5bd4e617d6879ebc341283"
+      },
+      {
+        "bytes": 17493,
+        "path": "docs/lab/guide/authority.md",
+        "sha256": "25b14f685970113cb3691ce20d7c54b4265afb60e8a73bf6949b81bde54f932e"
+      },
+      {
+        "bytes": 19219,
+        "path": "docs/lab/guide/lifecycle.md",
+        "sha256": "44fcaed440636b5b18960dc9a7f5556f57be28015850ead8f946e8475946bdc9"
+      },
+      {
+        "bytes": 12446,
+        "path": "docs/lab/guide/provenance.md",
+        "sha256": "655576b822d3ca5c018556ebd0bc631a9b73739a9f025de2baf57310e5ba693f"
+      }
+    ],
+    "ontology-contract": [
+      {
+        "bytes": 7019,
+        "path": "authority/artifact-types/ontology-node/v2/schema.json",
+        "sha256": "447c413cc61a7a627d8f657437a1784f77b579b3d9f84f5823e0dd5c9c48317f"
+      },
+      {
+        "bytes": 8546,
+        "path": "authority/artifact-types/ontology-edge/v1/schema.json",
+        "sha256": "968999eac9b9f37cbb97edf7d0e146edbc78a8bb3e171c0afd997d296dc18c5f"
+      },
+      {
+        "bytes": 4965,
+        "path": "authority/artifact-types/ontology-package/v1/schema.json",
+        "sha256": "331f3535aab9460c159168cd4ed0697a8b77332a28fb9b7e9ebb7dd5ad85cc07"
+      },
+      {
+        "bytes": 3768,
+        "path": "authority/artifact-types/ontology-manifest/v1/schema.json",
+        "sha256": "3be3b382078b02c14c90b3afc1df345056057d1da5ae8e1c8c610118f4105e1c"
+      },
+      {
+        "bytes": 2914,
+        "path": "authority/artifact-types/ontology-cut/v1/schema.json",
+        "sha256": "ae5f8e23cb0d5b34b1e55d6816a03ee4618b884c51262d86c46af4260c025471"
+      },
+      {
+        "bytes": 3719,
+        "path": "authority/artifact-types/ontology-view/v1/schema.json",
+        "sha256": "32c12b7e917e8872b82174d963d4a17e2b2e5ff64d7c798774a72cfcdb497d4b"
+      },
+      {
+        "bytes": 4055,
+        "path": "authority/artifact-types/semantic-event-history/v1/schema.json",
+        "sha256": "f81cd811a4c15c25ea5459cca9d7ee6ed8ebe112e0bf38c81fda487b452311bd"
+      },
+      {
+        "bytes": 5207,
+        "path": "authority/artifact-types/governance-event-history/v1/schema.json",
+        "sha256": "b39e5b97dfc908e0d6685c39ad0864cb7c3c479522ae3c83995da83e191834d5"
+      },
+      {
+        "bytes": 2843,
+        "path": "authority/artifact-types/context-request/v1/schema.json",
+        "sha256": "c4db5d934a8b5d39bd14d231e5f8353d3f1a288ba7f314f987d62ef58d767615"
+      },
+      {
+        "bytes": 3280,
+        "path": "authority/artifact-types/context-view/v1/schema.json",
+        "sha256": "08b7e0667bc43b45bc125c06c18bc21b91fc72d0f9c2d7c1dade2b7e6b7668c2"
+      }
+    ],
+    "ontology-lifecycle-witness": [
+      {
+        "bytes": 7679,
+        "path": "ontology-lifecycle/README.md",
+        "sha256": "0913518c926996efd12436edeefbca5501b9b01e2de99495d319f4c8bae23e26"
+      },
+      {
+        "bytes": 1375,
+        "path": "ontology-lifecycle/candidate-selections.json",
+        "sha256": "b1959c4fa7fbb70d34c9da72ee6665b05994b444e609da509dca77d699fb0a22"
+      },
+      {
+        "bytes": 7710,
+        "path": "ontology-lifecycle/business-ontology.json",
+        "sha256": "3ea266238a33616da279a5b3434a5e3b3482deac22ecee0ddc6ae65e67826eac"
+      },
+      {
+        "bytes": 4768,
+        "path": "ontology-lifecycle/product-capability.json",
+        "sha256": "b042e6e0165fde0196bb916ae8f77ef7e7f8d1cd15f1f700d2350a5e60bec3df"
+      },
+      {
+        "bytes": 2974,
+        "path": "ontology-lifecycle/domainspec/event-sourcing/source.json",
+        "sha256": "387983d6f4b3115e3391e89fe19bd3c64d833a9009520b450ace5221f11f7233"
+      },
+      {
+        "bytes": 289,
+        "path": "ontology-lifecycle/runtime/Cargo.toml",
+        "sha256": "6e17c6f449dd7068f9d2aa4bd664e8e1e8a8a0083c3e93ceca5e78def13364dc"
+      },
+      {
+        "bytes": 80301,
+        "path": "ontology-lifecycle/runtime/src/lib.rs",
+        "sha256": "f1b3f7cf463ebcc6e7b887b374d75adeac29ba38acfec3bafacfe4d3159f3a7b"
+      },
+      {
+        "bytes": 10075,
+        "path": "ontology-lifecycle/scripts/verify.py",
+        "sha256": "9e56cd99240c0536567371c08a2e02b59f44d56757ad3ebfaaaaa7b7332588c7"
+      },
+      {
+        "bytes": 14325,
+        "path": "docs/proposals/0004-governed-ontology-node-architecture/proposal.json",
+        "sha256": "a2257b185c1c4cbcbb92992e10fa202172e79c4603734edb24cff5bcc5d00b6c"
+      },
+      {
+        "bytes": 6630,
+        "path": "authority/ontology-integration/candidates/0003-definition-complete-runtime-integration/MODEL.md",
+        "sha256": "d1a66a767497dee791b86661211e4f7ada8a85955081955b0f9b203e9154ccbf"
+      }
+    ],
+    "relation-and-artifact-contract": [
+      {
+        "bytes": 522,
+        "path": "docs/decisions/0070-definition-complete-lab-model-admission/DECISION.md",
+        "sha256": "ba42524959a156ebe5fbb4a42920d3185e28c9e0dc35bd9d5d63c227bb831063"
+      },
+      {
+        "bytes": 114282,
+        "path": "docs/decisions/0070-definition-complete-lab-model-admission/proposal/artifact-type-admission-manifest.json",
+        "sha256": "768f8d3f8f1de67df78f315814602e4a2952a730c1af91ad5e57fb95121b1407"
+      },
+      {
+        "bytes": 29531,
+        "path": "docs/decisions/0070-definition-complete-lab-model-admission/proposal/relation-kind-registry-postimage.json",
+        "sha256": "5821e97be050c7722e5eb3207f72d02d1caadc9f0c3b4d351450007cbfe16646"
+      },
+      {
+        "bytes": 2214,
+        "path": "authority/artifact-types/artifact-type-registry/v1/schema.json",
+        "sha256": "7629202aa9d395b9feb5aea915d97982e64c05b9afc358aee4e2e1463295c5e5"
+      },
+      {
+        "bytes": 5992,
+        "path": "authority/artifact-types/relation-kind/v2/schema.json",
+        "sha256": "e0b6c594b1b95dedaeddef93dd2fdc36c7ecc7a9e4235d63144ba6167023693c"
+      },
+      {
+        "bytes": 320918,
+        "path": "authority/artifact-types/typed-relation/v2/schema.json",
+        "sha256": "837e8ac2fb92dddd2ec894ac7238cf0415698371ac4b8e72087df0d459346a1f"
+      }
+    ]
+  },
+  "source_commit": "19d860e719d6d65c05bff74b1c7547b3d48defcc",
+  "source_repository": "cyberAlchemyAI/CyberAlchemy-lab",
+  "status": "read-only-adoption-audit",
+  "tracked_area_counts": {
+    ".arcanum": 19,
+    ".gitattributes": 1,
+    ".github": 1,
+    ".gitignore": 1,
+    "CyberAlchemy-From-Intent-to-Bounded-Evidence.pdf": 1,
+    "README.md": 1,
+    "architecture": 32,
+    "authority": 3159,
+    "claude": 4,
+    "contexts": 34,
+    "coordination": 10,
+    "craft": 14762,
+    "define": 1645,
+    "docs": 65125,
+    "evidence": 3421,
+    "implementation": 5209,
+    "ontology-lifecycle": 823,
+    "output": 11267,
+    "product": 32019,
+    "tests": 78,
+    "tooling": 35,
+    "website": 1208
+  },
+  "tracked_file_count": 138855
+}

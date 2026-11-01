@@ -23,6 +23,8 @@ The [EA source snapshot](examples/engineer-assessment/README.md) contains the 88
 
 The [Lab schema snapshot](authority/README.md) contains only the 17 existing artifact schemas needed by this package's validator. It is a dependency snapshot, not a new Lab authority. The original Lab checkout and other local projects are outside this repository.
 
+The [Lab asset adoption inventory](docs/lab-asset-adoption/2026-11-01/INVENTORY.md) surveys the public Lab source cut and ranks definitions, relation kinds, ontology lifecycle, governance, and tooling for selective reuse. Its [source manifest](docs/lab-asset-adoption/2026-11-01/source-manifest.json) pins selected files and hashes. The inventory is a proposal for future imports; it does not change this model's authority or runtime status.
+
 ## Status
 
 No task offers, accepted research runs or findings, token issue, sponsor funding, engineer lead sales, employer access, stablecoin payments, or Product decisions are represented as real events here. Contributions should preserve that distinction.
