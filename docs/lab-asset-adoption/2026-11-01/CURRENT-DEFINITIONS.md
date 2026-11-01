@@ -4,7 +4,7 @@ Status: read-only source catalog. Authority effect: none.
 
 Source: `cyberAlchemyAI/CyberAlchemy-lab` at `19d860e719d6d65c05bff74b1c7547b3d48defcc`. The registry has 189 admitted exact versions; 183 identities are current. The remaining 6 admitted versions are historical/noncurrent. The 36-record shortlist in [INVENTORY.md](INVENTORY.md) is a reuse priority, not the full admitted set.
 
-The current lookup is keyed by identity, so distinct IDs can share a display term. Each source link below points to the exact pinned version. Importing a record does not admit it in ARN.
+The current lookup is keyed by identity, so distinct IDs can share a display term. Each source link below points to the exact pinned version. The complete [ARN source snapshot](../../../references/cyberalchemy-lab/definitions/README.md) copies these bytes. Importing a record does not admit it in ARN.
 
 | Term | Definition identity | Source |
 | --- | --- | --- |

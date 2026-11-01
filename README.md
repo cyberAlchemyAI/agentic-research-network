@@ -23,7 +23,7 @@ The [EA source snapshot](examples/engineer-assessment/README.md) contains the 88
 
 The [Lab schema snapshot](authority/README.md) contains only the 17 existing artifact schemas needed by this package's validator. It is a dependency snapshot, not a new Lab authority. The original Lab checkout and other local projects are outside this repository.
 
-The [Lab asset adoption inventory](docs/lab-asset-adoption/2026-11-01/INVENTORY.md) surveys the public Lab source cut and ranks definitions, relation kinds, ontology lifecycle, governance, and tooling for selective reuse. The [complete current Definition catalog](docs/lab-asset-adoption/2026-11-01/CURRENT-DEFINITIONS.md) lists all 183 current admitted Lab identities; 36 are initial reuse priorities. Its [source manifest](docs/lab-asset-adoption/2026-11-01/source-manifest.json) pins files and hashes. The inventory is a proposal for future imports; it does not change this model's authority or runtime status.
+The [Lab asset adoption inventory](docs/lab-asset-adoption/2026-11-01/INVENTORY.md) surveys the public Lab source cut and ranks definitions, relation kinds, ontology lifecycle, governance, and tooling for selective reuse. The [Lab Definition source snapshot](references/cyberalchemy-lab/definitions/README.md) now contains all 189 admitted source versions, including 183 current identities, with exact bytes and a verification script. The [current Definition catalog](docs/lab-asset-adoption/2026-11-01/CURRENT-DEFINITIONS.md) is a readable index. Further imports remain proposals; copying the Lab records does not change this model's authority or runtime status.
 
 ## Status
 

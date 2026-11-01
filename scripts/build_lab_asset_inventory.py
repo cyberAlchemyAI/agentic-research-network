@@ -204,8 +204,9 @@ def render_catalog(result: dict) -> str:
         "is a reuse priority, not the full admitted set.",
         "",
         "The current lookup is keyed by identity, so distinct IDs can share a display term. "
-        "Each source link below points to the exact pinned version. Importing a record "
-        "does not admit it in ARN.",
+        "Each source link below points to the exact pinned version. The complete "
+        "[ARN source snapshot](../../../references/cyberalchemy-lab/definitions/README.md) "
+        "copies these bytes. Importing a record does not admit it in ARN.",
         "",
         "| Term | Definition identity | Source |",
         "| --- | --- | --- |",

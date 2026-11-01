@@ -1,6 +1,6 @@
 # CyberAlchemy Lab assets for Agentic Research Network
 
-Status: **read-only adoption inventory**. Authority effect: **none**. This inventory recommends a source-pinned import sequence; it does not admit definitions, activate Lab governance in ARN, or claim a working ontology service.
+Status: **read-only adoption inventory**. Authority effect: **none**. The Definition source snapshot is now copied; the remaining stages are recommendations. This inventory does not admit definitions, activate Lab governance in ARN, or claim a working ontology service.
 
 ## What was inspected
 
@@ -21,7 +21,7 @@ python3 scripts/build_lab_asset_inventory.py \
 
 | Priority | Lab asset | Use in ARN | Condition before adoption |
 | --- | --- | --- | --- |
-| 0 | Definition registry and complete 183-record catalog; 36 initial priorities | A read-only semantic baseline for Project, Product, Goal, research work, evidence, authority, ontology and provenance | Review the full catalog, then import selected exact bytes as a **Lab reference snapshot**; map each ARN concept to reuse, specialization, or new definition. Do not replace ARN definitions by matching names. |
+| 0 | Definition registry and complete 183-record catalog; 36 initial priorities | A read-only semantic baseline for Project, Product, Goal, research work, evidence, authority, ontology and provenance | **Copied:** all 189 admitted versions in the [Lab reference snapshot](../../../references/cyberalchemy-lab/definitions/README.md). Map each ARN concept to reuse, specialization, or new definition; do not replace ARN definitions by matching names. |
 | 0 | Definition v1/v2 schemas and candidate lifecycle profile | Shape and review vocabulary for ARN Definition records | Keep the profile's `candidate-unadmitted` status. Define an ARN owner and admission route before using it as policy. |
 | 1 | Artifact Type, Relation Kind, Typed Relation and ontology schemas | Graph contracts for research objects and their links | Check exact endpoint types, qualifiers, schema versions, and referential closure. |
 | 1 | Nine admitted Relation Kinds | Initial link vocabulary for contributions, derivation, evidence, evaluation and governance | Existing Lab endpoint pairs do not automatically cover ARN types; extend by an ARN-owned candidate rather than asserting Lab admission. |
@@ -90,7 +90,7 @@ Counts are tracked files at the pinned public Lab commit. “Reference” means 
 
 ## Import sequence and acceptance checks
 
-1. **Semantic bridge.** Review the full 183-identity catalog and begin a read-only source slice with the 36 initial priorities plus any other definitions required by ARN. Retain original IDs, versions, status and digest. Add an ARN mapping for each local definition: reuse, specialize, new, or unresolved. Check for collisions and owner assignment. Keep the full Lab registry as evidence, not ARN's current lookup.
+1. **Semantic bridge.** The read-only source slice now contains all 183 current identities and six historical versions, retaining original IDs, versions, status and digest. Review the full catalog; add an ARN mapping for each local definition: reuse, specialize, new, or unresolved. Check for collisions and owner assignment. Keep the copied Lab registry as evidence, not ARN's current lookup.
 2. **Typed graph.** Reuse the 17 existing schemas, add only required type/ontology schemas and the selected relation records, and build an ARN type/edge registry. Validate exact endpoint pairs, qualifiers, referenced definitions, versioned type IDs and cycles. Record which relations are genuinely new ARN proposals.
 3. **Decision trail.** Define ARN review, Project State, appeal and contribution decisions using the Lab provenance/context patterns. Separate semantic state, authority state, validation evidence and publication state.
 4. **Ontology prototype.** If the graph needs event replay, import the whole candidate closure into an experimental module. Prove replay determinism, cut consistency, governance joins and projection regeneration against ARN fixtures before making it a core dependency.
