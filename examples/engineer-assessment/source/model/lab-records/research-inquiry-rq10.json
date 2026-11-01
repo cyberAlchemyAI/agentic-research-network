@@ -1,0 +1,39 @@
+{
+  "kind": "research-inquiry",
+  "node_id": "research-inquiry:ea:rq-10",
+  "status": "candidate-unadmitted",
+  "authority_effect": "none",
+  "created_at": "2026-10-27T18:14:09Z",
+  "last_updated_at": "2026-10-27T18:23:54Z",
+  "project_ref": "project:ea-research-001",
+  "scope_ref": "project:ea-research-001",
+  "goal_refs": ["goal:ea:g02-case-science@candidate.1", "goal:ea:g04-measurement@candidate.1"],
+  "question": "Which synthetic response model, if any, predicts developer operation paths, reveal transitions, response to one randomized case-fact change and evaluator failures on held-out cases better than simple empirical, unprofiled and equally calibrated persona-prompted baselines?",
+  "inclusions": [
+    "Synthetic defect-search utility and human-distribution alignment as separate targets",
+    "Human intervention-fidelity contrast as a separate target from marginal path fit",
+    "Permissioned, source-pinned developer response processes with person/case/mode splits",
+    "Neutral, untuned and calibrated persona, process-state and distribution-only comparator models"
+  ],
+  "exclusions": [
+    "Treating configured personas as a developer population or a measured human trait",
+    "Inferring hiring validity or fairness from synthetic response frequencies"
+  ],
+  "source_policy": {
+    "allowed_source_kinds": ["peer-reviewed study", "dated original preprint", "source-pinned synthetic run", "permissioned participant study", "independent blind coding"],
+    "selection_criteria": ["Record task, population, behavior target and split", "Include positive and negative simulator findings", "Separate transcript observation from inferred cognition"],
+    "conflict_handling": "Report task- and case-specific disagreements; preserve rare valid human paths and reviewer uncertainty.",
+    "freshness_rule": "Recheck model, prompt, case and participant-population changes before transporting an alignment claim."
+  },
+  "source_refs": ["research/simulation/HUMAN-ALIGNMENT-MODEL.md", "research/PROGRAM-NOVELTY-SOURCE-LEDGER.md"],
+  "method_ref": "research/simulation/HUMAN-ALIGNMENT-EXPERIMENT.md",
+  "stop_conditions": ["Human data purpose or consent gate fails", "Path taxonomy or blind coding is unreliable", "Holdout or model baseline cannot be preserved"],
+  "limitations": ["No calibrated state probabilities or consented developer path corpus", "Current ten-episode canary tests one case and has a review-isolation deviation"],
+  "evidence_aggregate_refs": [],
+  "finding_refs": [],
+  "counterevidence_refs": [],
+  "owner_ref": "role:ea-research-lead-unassigned",
+  "owner_route": "role:ea-measurement-owner-unassigned",
+  "challenge_route": "role:ea-independent-reviewer-unassigned",
+  "claim_ceiling": "Candidate inquiry only; no Lab admission, human alignment result or hiring inference."
+}

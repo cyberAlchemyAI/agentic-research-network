@@ -1,0 +1,38 @@
+{
+  "kind": "research-inquiry",
+  "node_id": "research-inquiry:ea:rq-09",
+  "status": "candidate-unadmitted",
+  "authority_effect": "none",
+  "created_at": "2026-10-27T18:14:09Z",
+  "last_updated_at": "2026-10-27T18:14:09Z",
+  "project_ref": "project:ea-research-001",
+  "scope_ref": "project:ea-research-001",
+  "goal_refs": ["goal:ea:g02-case-science@candidate.1", "goal:ea:g04-measurement@candidate.1"],
+  "question": "Does a source-bound failure-ledger and rival-prediction novelty workflow yield more distinct, executable and useful research hypotheses across case, simulator and scoring work than ordinary ideation at matched cost?",
+  "inclusions": [
+    "Local and published closest-prior comparisons for each proposed research contribution",
+    "Controlled method contrasts, independent novelty/feasibility review and a balanced execution subset",
+    "Negative, duplicate, no-opening and inconclusive proposals"
+  ],
+  "exclusions": [
+    "Treating idea count or model self-rating as evidence of research value",
+    "Inferring case, score or hiring validity from a successful ideation workflow"
+  ],
+  "source_policy": {
+    "allowed_source_kinds": ["peer-reviewed study", "dated original preprint", "source-pinned local experiment", "versioned failure receipt", "independent expert review"],
+    "selection_criteria": ["Pin date, query, exact source and closest comparator", "Preserve contrary and null findings", "Separate proposal judgment from executed value"],
+    "conflict_handling": "Retain competing novelty and feasibility judgments with first-form evidence, then adjudicate without rewriting the original proposal.",
+    "freshness_rule": "Refresh literature and local source cuts before a new claimed addition or replication."
+  },
+  "source_refs": ["research/PROGRAM-NOVELTY-SOURCE-LEDGER.md", "research/PROGRAM-NOVELTY-CANDIDATES.md"],
+  "method_ref": "research/PROGRAM-NOVELTY-METHOD.md",
+  "stop_conditions": ["Source facts or reference set cannot be frozen", "Reviewers cannot distinguish candidate and prior mechanism", "Execution selection is confounded by arm"],
+  "limitations": ["No registered E12 run or independently reviewed proposal batch", "External literature cut is targeted rather than exhaustive"],
+  "evidence_aggregate_refs": [],
+  "finding_refs": [],
+  "counterevidence_refs": [],
+  "owner_ref": "role:ea-research-lead-unassigned",
+  "owner_route": "role:ea-product-owner-unassigned",
+  "challenge_route": "role:ea-independent-reviewer-unassigned",
+  "claim_ceiling": "Candidate inquiry only; no Lab admission, research-method finding or product authority."
+}

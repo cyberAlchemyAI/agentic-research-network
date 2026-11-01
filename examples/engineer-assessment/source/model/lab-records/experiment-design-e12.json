@@ -1,0 +1,47 @@
+{
+  "kind": "experiment-design",
+  "node_id": "experiment-design:ea:e12-program-novelty",
+  "status": "candidate-unadmitted",
+  "authority_effect": "none",
+  "created_at": "2026-10-27T18:14:09Z",
+  "last_updated_at": "2026-10-27T19:40:41Z",
+  "project_ref": "project:ea-research-001",
+  "scope_ref": "project:ea-research-001",
+  "goal_refs": ["goal:ea:g02-case-science@candidate.1", "goal:ea:g04-measurement@candidate.1"],
+  "research_refs": ["research-inquiry:ea:rq-09@candidate.1"],
+  "subject_ref": "EA-PRODUCT-001@0.1.0-candidate.2",
+  "product_evaluation_context": {
+    "evaluation_purpose": "Test whether a source-bound novelty workflow yields distinct, executable and useful research hypotheses across case, simulator and scoring work at matched cost.",
+    "product_ref": "EA-PRODUCT-001@0.1.0-candidate.2",
+    "product_thesis_ref": "product-thesis:ea:compact-selection@candidate.1",
+    "product_capability_refs": ["EA-CAP-02", "EA-CAP-03", "EA-CAP-04"],
+    "realization_binding_refs": [],
+    "thesis_hypothesis_refs": [],
+    "thesis_outcome_refs": []
+  },
+  "question_or_hypothesis": "A failure-ledger and closest-prior/rival-prediction method produces more source-relative distinct, executable and useful hypotheses per total author/reviewer cost than ordinary ideation, without suppressing mechanism diversity.",
+  "design_state": "draft",
+  "protocol_ref": "research/PROGRAM-NOVELTY-EXPERIMENT.md",
+  "conditions": [
+    "Same frozen source facts, dated prior work, author/reviewer budget and proposal count across four factorial arms; generic-creativity arm is a separate matched benchmark",
+    "Raw author proposals are sealed before blind extraction of common semantic fields; ordinary controls are not instructed to fill treated method fields",
+    "Blind independent first-form novelty and feasibility reviews before arm join",
+    "Balanced, predeclared execution subset includes lower-rated executable ideas"
+  ],
+  "variables_or_interventions": [
+    {"kind": "independent", "name": "failure-ledger organization", "planned_value": "ordinary versus source-observation causal-map instruction"},
+    {"kind": "independent", "name": "closest-prior and rival-prediction requirement", "planned_value": "absent versus explicit comparator and divergent observation"}
+  ],
+  "measure_refs": ["research/PROGRAM-NOVELTY-OPERATIONS.md#program-measures", "research/PROGRAM-NOVELTY-MEASUREMENT.md"],
+  "environment": "Source-pinned case, simulator and scorer research packets; no participant recording or employment decision.",
+  "prerequisites": ["Neutral source-steward verification of frozen source/failure packets and common prior list", "Matched arm prompts and raw-output envelope; v2 feasibility allocation prepared but unrun", "Independent reviewers and a stable semantic fixture set", "Pilot variance and execution-capacity plan"],
+  "stop_rules": ["Source packs differ in facts or access", "Review format exposes authoring arm", "Novelty adjudication or execution selection is too unstable to interpret"],
+  "limitations": ["No source-steward approval, run, independent review or executed-value result", "The 15-cell v2 feasibility allocation supports format/cost preflight only", "Measurement Method carrier and typed relations remain to be prepared"],
+  "run_refs": [],
+  "evidence_refs": [],
+  "finding_refs": [],
+  "owner_ref": "role:ea-research-lead-unassigned",
+  "owner_route": "role:ea-product-owner-unassigned",
+  "challenge_route": "role:ea-independent-reviewer-unassigned",
+  "claim_ceiling": "Candidate experiment design only; no program novelty finding, case release or product authority."
+}

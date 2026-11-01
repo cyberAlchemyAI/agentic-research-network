@@ -1,0 +1,48 @@
+{
+  "kind": "experiment-design",
+  "node_id": "experiment-design:ea:e13-human-alignment",
+  "status": "candidate-unadmitted",
+  "authority_effect": "none",
+  "created_at": "2026-10-27T18:14:09Z",
+  "last_updated_at": "2026-10-27T18:30:10Z",
+  "project_ref": "project:ea-research-001",
+  "scope_ref": "project:ea-research-001",
+  "goal_refs": ["goal:ea:g02-case-science@candidate.1", "goal:ea:g04-measurement@candidate.1"],
+  "research_refs": ["research-inquiry:ea:rq-10@candidate.1", "research-inquiry:ea:rq-04@candidate.1"],
+  "subject_ref": "EA-PRODUCT-001@0.1.0-candidate.2",
+  "product_evaluation_context": {
+    "evaluation_purpose": "Test whether a response-process simulator predicts held-out developer operation paths, reveal transitions and a separately randomized case-fact response better than simple and equally calibrated persona-prompted baselines.",
+    "product_ref": "EA-PRODUCT-001@0.1.0-candidate.2",
+    "product_thesis_ref": "product-thesis:ea:compact-selection@candidate.1",
+    "product_capability_refs": ["EA-CAP-02", "EA-CAP-03", "EA-CAP-04"],
+    "realization_binding_refs": [],
+    "thesis_hypothesis_refs": [],
+    "thesis_outcome_refs": []
+  },
+  "question_or_hypothesis": "A calibrated, fact-constrained response-process simulator predicts held-out developer path/reveal distributions and response to one operative case-fact change better than smoothed empirical, neutral-LLM and equally calibrated persona-prompted baselines without losing rare valid paths or access-mode reliability.",
+  "design_state": "draft",
+  "protocol_ref": "research/simulation/HUMAN-ALIGNMENT-EXPERIMENT.md",
+  "conditions": [
+    "Separate synthetic defect-search utility from human-distribution prediction",
+    "Treat marginal path fit and randomized case-fact intervention fidelity as distinct claims",
+    "Freeze exact case/model/prompt/state taxonomy and predictions before human holdout",
+    "Use permissioned developer data with independent blind process coding and person/case-family splits"
+  ],
+  "variables_or_interventions": [
+    {"kind": "independent", "name": "simulator model", "planned_value": "simple empirical baseline, unprofiled LLM, untuned and matched-calibration persona LLM, sampled decision-context model, response-state model and distribution predictor"},
+    {"kind": "independent", "name": "case family and response mode", "planned_value": "versioned, counterbalanced or held-out where sample precision allows"},
+    {"kind": "independent", "name": "separate research case-fact allocation", "planned_value": "two independently reviewed variants differing in one operative fact, randomized only after consent and precision review"}
+  ],
+  "measure_refs": ["research/simulation/HUMAN-ALIGNMENT-EXPERIMENT.md#observations-metrics-and-missingness"],
+  "environment": "Brazil-only mixed software-developer formative pilot after purpose, privacy, consent, access and research-protocol decisions.",
+  "prerequisites": ["Case and path taxonomy review", "Participant-data purpose and model-training permission", "Independent coders, pilot precision plan and holdout split", "Separate precision and comparability review for the randomized case-fact module"],
+  "stop_rules": ["Privacy or consent gate fails", "Path coding is unreliable", "Holdout leakage, rare-valid-path loss or material access-mode error"],
+  "limitations": ["No human response corpus or calibrated simulator", "No employment-selection inference or validated score follows from simulator alignment", "Measurement Method carrier and typed relations remain to be prepared"],
+  "run_refs": [],
+  "evidence_refs": [],
+  "finding_refs": [],
+  "owner_ref": "role:ea-research-lead-unassigned",
+  "owner_route": "role:ea-measurement-owner-unassigned",
+  "challenge_route": "role:ea-independent-reviewer-unassigned",
+  "claim_ceiling": "Candidate experiment design only; no collection permission, human alignment result or hiring authority."
+}
